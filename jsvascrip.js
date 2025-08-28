@@ -5,6 +5,7 @@ function increaseHeart(){
     document.getElementById('heratCounter').innerText = heartCount;
 }
 
+
 // Alert massage 
 // card no 1 
 function emergency(){
@@ -42,3 +43,4 @@ function brac(){
 function railway(){
     alert( "📞 Calling Bangladesh Railway 163...");
 }
+
