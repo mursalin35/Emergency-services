@@ -28,57 +28,55 @@
 <!-- w-[1280px]  -->
 
 <body class="bg-[#eefaee]  font-[Inter] px-10 mx-auto">
-    <header>
-        <nav class="flex justify-between h-16 items-center ">
-            <!-- Left site element  -->
-            <div class="flex gap-2  select-none">
-                <img class="h-10 cursor-pointer" src="assets/logo.png" alt="গনপ্রজাতন্ত্রী বাংলাদেশ সরকার লোগো">
-                <h4 class="font-bold leading-4.5 text-[#006747] select-text">Emergency <br> service</h4>
-            </div>
-            <!-- Right site element  -->
-            <div class="flex gap-5 items-center">
+    <nav class="sticky top-0 bg-green-100 -mx-10 px-10 flex justify-between h-16 items-center shadow ">
+        <!-- Left site element  -->
+        <div class="flex gap-2  select-none">
+            <img class="h-10 cursor-pointer" src="assets/logo.png" alt="গনপ্রজাতন্ত্রী বাংলাদেশ সরকার লোগো">
+            <h4 class="font-bold leading-4.5 text-[#006747] select-text">Emergency <br> service</h4>
+        </div>
+        <!-- Right site element  -->
+        <div class="flex gap-5 items-center">
 
-                <!-- herat icon #E0FFE0 -->
-                <div class="flex bg-[#dbfddb] h-10 w-22 rounded-full items-center justify-center">
-                    <div class="flex gap-1.5 items-center select-none">
-                        <!-- Count function add  -->
-                        <p id="heratCounter" class="text-[0.8rem] font-extrabold select-text">0</p>
-                        <img class="h-6  cursor-pointer" src="assets/heart.png" alt="red color herat icon">
-                    </div>
-                </div>
-
-                <!-- coin icon #dbfddb -->
-                <div class="flex bg-[#dbfddb] h-10 w-22 rounded-full items-center justify-center">
-                    <div class="flex gap-1.5 items-center select-none">
-                        <p id="coin" class="text-[0.8rem] font-extrabold select-text">100</p>
-                        <img class="h-5 cursor-pointer" src="assets/coin.png" alt="golden color coin">
-                    </div>
-                </div>
-
-                <!-- copy button -->
-                <button
-                    class="flex bg-[#00A63E] hover:bg-[#a9a9a9]  h-10 w-25 rounded-full items-center justify-center cursor-pointer text-[0.8rem] text-white font-medium "><span
-                        class="mr-2" id="copyCounter">0 </span> Copy</button>
-
-            </div>
-        </nav>
-        <!-- Hero Section  -->
-        <section class="-mx-10">
-            <div
-                class="flex h-41 bg-gradient-to-r from-[#012B32] via-[#0C7859] to-[#012B32] text-white  justify-center items-center">
-                <div class="text-center select-none">
-                    <img class="h-15 inline-block mb-2 cursor-pointer" src="assets/logo-bd.png"
-                        alt="গনপ্রজাতন্ত্রী বাংলাদেশ সরকার লোগো">
-                    <h1 class="font-[Noto_Serif_Bengali] text-[1.8rem] font-bold mb-1 select-text">জরুরি সেবা ডিরেক্টরি
-                    </h1>
-                    <p class="text-[0.8rem] select-text">Government Emergency Services at Your Fingertip - A Project by
-                        Government
-                        of the People's
-                        Republic of Bangladesh</p>
+            <!-- herat icon #E0FFE0 -->
+            <div class="flex bg-green-200 h-10 w-22 rounded-full items-center justify-center">
+                <div class="flex gap-1.5 items-center select-none">
+                    <!-- Count function add  -->
+                    <p id="heratCounter" class="text-[0.8rem] font-extrabold select-text">0</p>
+                    <img class="h-6  cursor-pointer" src="assets/heart.png" alt="red color herat icon">
                 </div>
             </div>
-        </section>
-    </header>
+
+            <!-- coin icon #dbfddb -->
+            <div class="flex bg-green-200 h-10 w-22 rounded-full items-center justify-center">
+                <div class="flex gap-1.5 items-center select-none">
+                    <p id="coin" class="text-[0.8rem] font-extrabold select-text">100</p>
+                    <img class="h-5 cursor-pointer" src="assets/coin.png" alt="golden color coin">
+                </div>
+            </div>
+
+            <!-- copy button -->
+            <button
+                class="flex bg-[#00A63E] hover:bg-[#a9a9a9]  h-10 w-25 rounded-full items-center justify-center cursor-pointer text-[0.8rem] text-white font-medium "><span
+                    class="mr-2" id="copyCounter">0 </span> Copy</button>
+
+        </div>
+    </nav>
+    <!-- Hero Section  -->
+    <section class="-mx-10">
+        <div
+            class="flex h-41 bg-gradient-to-r from-[#012B32] via-[#0C7859] to-[#012B32] text-white  justify-center items-center">
+            <div class="text-center select-none">
+                <img class="h-15 inline-block mb-2 cursor-pointer" src="assets/logo-bd.png"
+                    alt="গনপ্রজাতন্ত্রী বাংলাদেশ সরকার লোগো">
+                <h1 class="font-[Noto_Serif_Bengali] text-[1.8rem] font-bold mb-1 select-text">জরুরি সেবা ডিরেক্টরি
+                </h1>
+                <p class="text-[0.8rem] select-text">Government Emergency Services at Your Fingertip - A Project by
+                    Government
+                    of the People's
+                    Republic of Bangladesh</p>
+            </div>
+        </div>
+    </section>
     <main>
         <!-- Card & Call container  -->
         <section class="mb-12 mt-8 flex gap-5">
