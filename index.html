@@ -25,31 +25,32 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Noto+Serif+Bengali:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
-
-<body class="bg-[#eefaee] w-[1280px] font-[Inter] px-10 mx-auto">
+<!-- w-[1280px]  -->
+<body class="bg-[#eefaee]  font-[Inter] px-10 mx-auto">
     <header>
-        <nav class="flex justify-between h-16 items-center">
+        <nav class="flex justify-between h-16 items-center ">
             <!-- Left site element  -->
-            <div class="flex gap-2">
-                <img class="h-10" src="assets/logo.png" alt="গনপ্রজাতন্ত্রী বাংলাদেশ সরকার লোগো">
-                <h4 class="font-bold leading-4.5 text-[#006747]">Emergency <br> service</h4>
+            <div class="flex gap-2  select-none">
+                <img class="h-10 cursor-pointer" src="assets/logo.png" alt="গনপ্রজাতন্ত্রী বাংলাদেশ সরকার লোগো">
+                <h4 class="font-bold leading-4.5 text-[#006747] select-text">Emergency <br> service</h4>
             </div>
             <!-- Right site element  -->
             <div class="flex gap-5 items-center">
 
                 <!-- herat icon #E0FFE0 -->
                 <div class="flex bg-[#dbfddb] h-10 w-22 rounded-full items-center justify-center">
-                    <div class="flex gap-1.5 items-center">
-                        <p class="text-[0.8rem] font-extrabold">20</p>
-                        <img class="h-6 " src="assets/heart.png" alt="red color herat icon">
+                    <div class="flex gap-1.5 items-center select-none">
+                        <!-- Count function add  -->
+                        <p id="heratCounter" class="text-[0.8rem] font-extrabold select-text">0</p>
+                        <img class="h-6  cursor-pointer" src="assets/heart.png" alt="red color herat icon">
                     </div>
                 </div>
 
                 <!-- coin icon #dbfddb -->
                 <div class="flex bg-[#dbfddb] h-10 w-22 rounded-full items-center justify-center">
-                    <div class="flex gap-1.5 items-center">
-                        <p class="text-[0.8rem] font-extrabold">100</p>
-                        <img class="h-5" src="assets/coin.png" alt="golden color coin">
+                    <div class="flex gap-1.5 items-center select-none">
+                        <p class="text-[0.8rem] font-extrabold select-text">100</p>
+                        <img class="h-5 cursor-pointer" src="assets/coin.png" alt="golden color coin">
                     </div>
                 </div>
 
@@ -60,14 +61,16 @@
             </div>
         </nav>
         <!-- Hero Section  -->
-        <section class="-mx-12">
+        <section class="-mx-10">
             <div
                 class="flex h-41 bg-gradient-to-r from-[#012B32] via-[#0C7859] to-[#012B32] text-white  justify-center items-center">
-                <div class="text-center">
-                    <img class="h-15 inline-block mb-2" src="assets/logo-bd.png"
+                <div class="text-center select-none">
+                    <img class="h-15 inline-block mb-2 cursor-pointer" src="assets/logo-bd.png"
                         alt="গনপ্রজাতন্ত্রী বাংলাদেশ সরকার লোগো">
-                    <h1 class="font-[Noto_Serif_Bengali] text-[1.8rem] font-bold mb-1">জরুরি সেবা ডিরেক্টরি</h1>
-                    <p class="text-[0.8rem]">Government Emergency Services at Your Fingertip - A Project by Government
+                    <h1 class="font-[Noto_Serif_Bengali] text-[1.8rem] font-bold mb-1 select-text">জরুরি সেবা ডিরেক্টরি
+                    </h1>
+                    <p class="text-[0.8rem] select-text">Government Emergency Services at Your Fingertip - A Project by
+                        Government
                         of the People's
                         Republic of Bangladesh</p>
                 </div>
@@ -85,12 +88,14 @@
                     <div class="w-full">
                         <div class="flex justify-between items-center">
                             <!-- hotline icon  -->
-                            <div class="flex justify-center items-center h-10 w-10 bg-[#FFE3E2] rounded-xl">
+                            <div
+                                class="flex justify-center items-center h-10 w-10 bg-[#FFE3E2] rounded-xl cursor-pointer select-none">
                                 <div><img class="h-5" src="assets/emergency.png" alt="">
                                 </div>
                             </div>
-                            <!-- heart icon  -->
-                            <div><img class="h-4 cursor-pointer" src="assets/heart2.png" alt=""></div>
+                            <!-- heart icon increaseHeart -->
+                            <div onclick="increaseHeart()"><img class="h-4 cursor-pointer" src="assets/heart2.png"
+                                    alt=""></div>
                         </div>
 
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">জাতীয় জরুরি সেবা
@@ -112,7 +117,7 @@
                             <!-- right button -->
                             <button
                                 class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
-                                type="submit">
+                                onclick="emergency()" type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -123,12 +128,14 @@
                     <div class="w-full">
                         <div class="flex justify-between items-center">
                             <!-- hotline icon  -->
-                            <div class="flex justify-center items-center h-10 w-10 bg-[#DFEFFF] rounded-xl">
+                            <div
+                                class="flex justify-center items-center h-10 w-10 bg-[#DFEFFF] rounded-xl cursor-pointer select-none">
                                 <div><img class="h-6.5" src="assets/police.png" alt="">
                                 </div>
                             </div>
                             <!-- heart icon  -->
-                            <div><img class="h-4 cursor-pointer" src="assets/heart2.png" alt=""></div>
+                            <div onclick="increaseHeart()"><img class="h-4 cursor-pointer" src="assets/heart2.png"
+                                    alt=""></div>
                         </div>
 
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">পুলিশ</h2>
@@ -148,8 +155,8 @@
                             <!-- right button -->
                             <button
                                 class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem]  text-white cursor-pointer"
-                                type="submit">
-                                <i class="fa-solid fa-phone"></i>
+                                onclick="police()" type="submit">
+                                <i id="" class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
                     </div>
@@ -159,12 +166,14 @@
                     <div class="w-full">
                         <div class="flex justify-between items-center">
                             <!-- hotline icon  -->
-                            <div class="flex justify-center items-center h-10 w-10 bg-[#FFE3E2] rounded-xl">
+                            <div
+                                class="flex justify-center items-center h-10 w-10 bg-[#FFE3E2] rounded-xl cursor-pointer select-none">
                                 <div><img class="h-5.5" src="assets/fire-service.png" alt="">
                                 </div>
                             </div>
                             <!-- heart icon  -->
-                            <div><img class="h-4 cursor-pointer" src="assets/heart2.png" alt=""></div>
+                            <div onclick="increaseHeart()"><img class="h-4 cursor-pointer" src="assets/heart2.png"
+                                    alt=""></div>
                         </div>
 
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">ফায়ার সার্ভিস
@@ -184,7 +193,7 @@
                                 Copy</button>
                             <!-- right button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="fire()"
                                 type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
@@ -196,12 +205,14 @@
                     <div class="w-full">
                         <div class="flex justify-between items-center">
                             <!-- hotline icon  -->
-                            <div class="flex justify-center items-center h-10 w-10 bg-[#FFE3E2] rounded-xl">
+                            <div
+                                class="flex justify-center items-center h-10 w-10 bg-[#FFE3E2] rounded-xl cursor-pointer select-none">
                                 <div><img class="h-5.5" src="assets/ambulance.png" alt="">
                                 </div>
                             </div>
                             <!-- heart icon  -->
-                            <div><img class="h-4 cursor-pointer" src="assets/heart2.png" alt=""></div>
+                            <div onclick="increaseHeart()"><img class="h-4 cursor-pointer" src="assets/heart2.png"
+                                    alt=""></div>
                         </div>
 
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">অ্যাম্বুলেন্স
@@ -221,7 +232,7 @@
                                 Copy</button>
                             <!-- right button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="ambulance()"
                                 type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
@@ -233,12 +244,14 @@
                     <div class="w-full">
                         <div class="flex justify-between items-center">
                             <!-- hotline icon  -->
-                            <div class="flex justify-center items-center h-10 w-10 bg-[#E3E2FF] rounded-xl">
+                            <div
+                                class="flex justify-center items-center h-10 w-10 bg-[#E3E2FF] rounded-xl cursor-pointer select-none">
                                 <div><img class="h-5 rounded-md" src="assets/nari-sisu.png" alt="">
                                 </div>
                             </div>
                             <!-- heart icon  -->
-                            <div><img class="h-4 cursor-pointer" src="assets/heart2.png" alt=""></div>
+                            <div onclick="increaseHeart()"><img class="h-4 cursor-pointer" src="assets/heart2.png"
+                                    alt=""></div>
                         </div>
 
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">নারী ও শিশু সহায়তা
@@ -258,7 +271,7 @@
                                 Copy</button>
                             <!-- right button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="women()"
                                 type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
@@ -270,12 +283,14 @@
                     <div class="w-full">
                         <div class="flex justify-between items-center">
                             <!-- hotline icon  -->
-                            <div class="flex justify-center items-center h-10 w-10 bg-[#FFE2F6] rounded-xl">
+                            <div
+                                class="flex justify-center items-center h-10 w-10 bg-[#FFE2F6] rounded-xl cursor-pointer select-none">
                                 <div><img class="h-5" src="assets/duduk.png" alt="">
                                 </div>
                             </div>
                             <!-- heart icon  -->
-                            <div><img class="h-4 cursor-pointer" src="assets/heart2.png" alt=""></div>
+                            <div onclick="increaseHeart()"><img class="h-4 cursor-pointer" src="assets/heart2.png"
+                                    alt=""></div>
                         </div>
 
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">দুদক
@@ -295,7 +310,7 @@
                                 Copy</button>
                             <!-- right button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="corruption()"
                                 type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
@@ -307,12 +322,14 @@
                     <div class="w-full">
                         <div class="flex justify-between items-center">
                             <!-- hotline icon  -->
-                            <div class="flex justify-center items-center h-10 w-10 bg-[#E2EDFF] rounded-xl">
+                            <div
+                                class="flex justify-center items-center h-10 w-10 bg-[#E2EDFF] rounded-xl cursor-pointer select-none">
                                 <div><img class="h-8" src="assets/biddut.png" alt="">
                                 </div>
                             </div>
                             <!-- heart icon  -->
-                            <div><img class="h-4 cursor-pointer" src="assets/heart2.png" alt=""></div>
+                            <div onclick="increaseHeart()"><img class="h-4 cursor-pointer" src="assets/heart2.png"
+                                    alt=""></div>
                         </div>
 
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">বিদ্যুৎ বিভ্রাট
@@ -332,7 +349,7 @@
                                 Copy</button>
                             <!-- right button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="electricity()"
                                 type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
@@ -344,12 +361,14 @@
                     <div class="w-full">
                         <div class="flex justify-between items-center">
                             <!-- hotline icon  -->
-                            <div class="flex justify-center items-center h-10 w-10 bg-[#FFEEE2] rounded-xl">
+                            <div
+                                class="flex justify-center items-center h-10 w-10 bg-[#FFEEE2] rounded-xl cursor-pointer select-none">
                                 <div><img class="h-7" src="assets/brac.png" alt="">
                                 </div>
                             </div>
                             <!-- heart icon  -->
-                            <div><img class="h-4 cursor-pointer" src="assets/heart2.png" alt=""></div>
+                            <div onclick="increaseHeart()"><img class="h-4 cursor-pointer" src="assets/heart2.png"
+                                    alt=""></div>
                         </div>
 
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">ব্র্যাক
@@ -369,7 +388,7 @@
                                 Copy</button>
                             <!-- right button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="brac()"
                                 type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
@@ -381,12 +400,14 @@
                     <div class="w-full">
                         <div class="flex justify-between items-center">
                             <!-- hotline icon  -->
-                            <div class="flex justify-center items-center h-10 w-10 bg-[#E2E8FF] rounded-xl">
+                            <div
+                                class="flex justify-center items-center h-10 w-10 bg-[#E2E8FF] rounded-xl cursor-pointer select-none">
                                 <div><img class="h-6" src="assets/Bangladesh-Railway.png" alt="">
                                 </div>
                             </div>
                             <!-- heart icon  -->
-                            <div><img class="h-4 cursor-pointer" src="assets/heart2.png" alt=""></div>
+                            <div onclick="increaseHeart()"><img class="h-4 cursor-pointer" src="assets/heart2.png"
+                                    alt=""></div>
                         </div>
 
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">বাংলাদেশ রেলওয়ে
@@ -406,7 +427,7 @@
                                 Copy</button>
                             <!-- right button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="railway()"
                                 type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
@@ -424,7 +445,8 @@
                         <p class="font-semibold text-[0.9rem]">Call History</p>
                     </div>
                     <!-- Clear -->
-                    <div class="flex bg-[#00A63E] hover:bg-[#a9a9a9] h-10 w-22 rounded-full items-center justify-center">
+                    <div
+                        class="flex bg-[#00A63E] hover:bg-[#a9a9a9] h-10 w-22 rounded-full items-center justify-center">
                         <button class="text-[0.8rem] text-white font-medium cursor-pointer">Clear</button>
                     </div>
                 </div>
@@ -504,7 +526,8 @@
         </section>
 
     </main>
-    <footer></footer>
+
+    <script src="jsvascrip.js"></script>
 </body>
 
 </html>
