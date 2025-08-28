@@ -4,15 +4,98 @@ function increaseHeart() {
     heartCount++;
     document.getElementById('heratCounter').innerText = heartCount;
 }
+
+
+
+
 // copy counter 
 let copyCount = 0;
 function increaseCopy() {
-   copyCount++;
-    document.getElementById('copy').innerText = copyCount;
+    copyCount++;
+    document.getElementById('copyCounter').innerText = copyCount;
 }
 
 
-// Alert massage 
+
+
+// Alert Copy massage
+// card no 1 
+function emergencyCopy() {
+    let emergencyText = document.getElementById("emergencyNumber").innerText;
+    navigator.clipboard.writeText(emergencyText)
+        .then(function () {
+            alert("📋 Number copied 999...");
+        });
+}
+// card no 2 
+function policeCopy() {
+    let policeText = document.getElementById("policeNumber").innerText;
+    navigator.clipboard.writeText(policeText)
+        .then(function () {
+            alert("📋 Number copied 999...");
+        });
+}
+// card no 3 
+function fireCopy() {
+    let fireText = document.getElementById("fireNumber").innerText;
+    navigator.clipboard.writeText(fireText)
+        .then(function () {
+            alert("📋 Number copied 999...");
+        });
+}
+// card no 4 
+function ambulanceCopy() {
+    let ambulanceText = document.getElementById("ambulanceNumber").innerText;
+    navigator.clipboard.writeText(ambulanceText)
+        .then(function () {
+            alert("📋 Number copied 1994-999999...");
+        });
+}
+// card no 5 
+function womenCopy() {
+    let womenText = document.getElementById("womenNumber").innerText;
+    navigator.clipboard.writeText(womenText)
+        .then(function () {
+            alert("📋 Number copied 109...");
+        });
+}
+// card no 6 
+function corruptionCopy() {
+    let corruptionText = document.getElementById("corruptionNumber").innerText;
+    navigator.clipboard.writeText(corruptionText)
+        .then(function () {
+            alert("📋 Number copied 106...");
+        });
+}
+// card no 7 
+function electricityCopy() {
+    let electricityText = document.getElementById("electricityNumber").innerText;
+    navigator.clipboard.writeText(electricityText)
+        .then(function () {
+            alert("📋 Number copied 16216...");
+        });
+}
+// card no 8 
+function bracCopy() {
+    let bracText = document.getElementById("bracNumber").innerText;
+    navigator.clipboard.writeText(bracText)
+        .then(function () {
+            alert("📋 Number copied 16445...");
+        });
+}
+// card no 9 
+function railwayCopy() {
+    let railwayText = document.getElementById("railwayNumber").innerText;
+    navigator.clipboard.writeText(railwayText)
+        .then(function () {
+            alert("📋 Number copied 163...");
+        });
+}
+
+
+
+
+// Alert Call massage 
 // card no 1 
 function emergency() {
     alert("📞 Calling National Emergency 999...");

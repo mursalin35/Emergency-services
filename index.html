@@ -26,6 +26,7 @@
         rel="stylesheet">
 </head>
 <!-- w-[1280px]  -->
+
 <body class="bg-[#eefaee]  font-[Inter] px-10 mx-auto">
     <header>
         <nav class="flex justify-between h-16 items-center ">
@@ -54,10 +55,11 @@
                     </div>
                 </div>
 
-                <!-- copy  -->
-                <div class="flex bg-[#00A63E] hover:bg-[#a9a9a9]  h-10 w-25 rounded-full items-center justify-center">
-                    <button class="text-[0.8rem] text-white font-medium cursor-pointer"><span>20</span> Copy</button>
-                </div>
+                <!-- copy button -->
+                <button
+                    class="flex bg-[#00A63E] hover:bg-[#a9a9a9]  h-10 w-25 rounded-full items-center justify-center cursor-pointer text-[0.8rem] text-white font-medium "><span
+                        class="mr-2" id="copyCounter">0 </span> Copy</button>
+
             </div>
         </nav>
         <!-- Hero Section  -->
@@ -101,20 +103,20 @@
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">জাতীয় জরুরি সেবা
                         </h2>
                         <p class="text-[0.8rem] text-[#5C5C5C]">National Emergency</p>
-                        <h2 class="mt-3 font-bold font-[Roboto] text-[1.4rem]">999</h2>
+                        <h2 id="emergencyNumber" class=" mt-3 font-bold font-[Roboto] text-[1.4rem]">999</h2>
                         <p
                             class="font-[Noto_Serif_Bengali] text-[0.8rem] text-[#5C5C5C] bg-[#F2F2F2] inline-block rounded-2xl px-4 py-1">
                             সার্বজনীন</p>
 
                         <!-- Button add  -->
                         <div class="flex justify-between mt-4">
-                            <!-- Left button  -->
+                            <!-- copy button  -->
                             <button
                                 class="w-[48%] rounded-md border-1 solid border-[#D4D6D5] py-1 text-[0.7rem] text-[#5C5C5C] cursor-pointer hover:bg-slate-700  hover:text-white "
-                                type="button">
+                                type="button" onclick="increaseCopy(),emergencyCopy()">
                                 <i class="fa-regular fa-copy"></i>
                                 Copy</button>
-                            <!-- right button -->
+                            <!-- call button -->
                             <button
                                 class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
                                 onclick="emergency()" type="submit">
@@ -140,19 +142,19 @@
 
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">পুলিশ</h2>
                         <p class="text-[0.8rem] text-[#5C5C5C]">Police</p>
-                        <h2 class="mt-3 font-bold font-[Roboto] text-[1.4rem]">999</h2>
+                        <h2 id="policeNumber" class="mt-3 font-bold font-[Roboto] text-[1.4rem]">999</h2>
                         <p
                             class="font-[Noto_Serif_Bengali] text-[0.8rem] text-[#5C5C5C] bg-[#F2F2F2] inline-block rounded-2xl px-4 py-1">
                             পুলিশ</p>
-                        <!-- Button add  -->
+                        <!-- copy add  -->
                         <div class="flex justify-between mt-4">
                             <!-- Left button  -->
                             <button
                                 class="w-[48%] rounded-md border-1 solid border-[#D4D6D5] py-1 text-[0.7rem] text-[#5C5C5C] cursor-pointer hover:bg-slate-700  hover:text-white "
-                                type="button">
+                                type="button" onclick="increaseCopy(), policeCopy()">
                                 <i class="fa-regular fa-copy"></i>
                                 Copy</button>
-                            <!-- right button -->
+                            <!-- call button -->
                             <button
                                 class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem]  text-white cursor-pointer"
                                 onclick="police()" type="submit">
@@ -179,22 +181,22 @@
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">ফায়ার সার্ভিস
                         </h2>
                         <p class="text-[0.8rem] text-[#5C5C5C]">Fire Service</p>
-                        <h2 class="mt-3 font-bold font-[Roboto] text-[1.4rem]">999</h2>
+                        <h2 id="fireNumber" class="mt-3 font-bold font-[Roboto] text-[1.4rem]">999</h2>
                         <p
                             class="font-[Noto_Serif_Bengali] text-[0.8rem] text-[#5C5C5C] bg-[#F2F2F2] inline-block rounded-2xl px-4 py-1">
                             ফায়ার</p>
                         <!-- Button add  -->
                         <div class="flex justify-between mt-4">
-                            <!-- Left button  -->
+                            <!-- Copy button  -->
                             <button
                                 class="w-[48%] rounded-md border-1 solid border-[#D4D6D5] py-1 text-[0.7rem] text-[#5C5C5C] cursor-pointer hover:bg-slate-700  hover:text-white "
-                                type="button">
+                                type="button" onclick="increaseCopy(), fireCopy()">
                                 <i class="fa-regular fa-copy"></i>
                                 Copy</button>
-                            <!-- right button -->
+                            <!-- Call button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="fire()"
-                                type="submit">
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                onclick="fire()" type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -218,22 +220,22 @@
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">অ্যাম্বুলেন্স
                         </h2>
                         <p class="text-[0.8rem] text-[#5C5C5C]">Ambulance</p>
-                        <h2 class="mt-3 font-bold font-[Roboto] text-[1.4rem]">1994-999999</h2>
+                        <h2 id="ambulanceNumber" class="mt-3 font-bold font-[Roboto] text-[1.4rem]">1994-999999</h2>
                         <p
                             class="font-[Noto_Serif_Bengali] text-[0.8rem] text-[#5C5C5C] bg-[#F2F2F2] inline-block rounded-2xl px-4 py-1">
                             স্বাস্থ্য</p>
                         <!-- Button add  -->
                         <div class="flex justify-between mt-4">
-                            <!-- Left button  -->
+                            <!-- Copy button  -->
                             <button
                                 class="w-[48%] rounded-md border-1 solid border-[#D4D6D5] py-1 text-[0.7rem] text-[#5C5C5C] cursor-pointer hover:bg-slate-700  hover:text-white "
-                                type="button">
+                                type="button" onclick="increaseCopy(), ambulanceCopy()">
                                 <i class="fa-regular fa-copy"></i>
                                 Copy</button>
-                            <!-- right button -->
+                            <!-- Call button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="ambulance()"
-                                type="submit">
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                onclick="ambulance()" type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -257,22 +259,22 @@
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">নারী ও শিশু সহায়তা
                         </h2>
                         <p class="text-[0.8rem] text-[#5C5C5C]">Women & Child Helpline</p>
-                        <h2 class="mt-3 font-bold font-[Roboto] text-[1.4rem]">109</h2>
+                        <h2 id="womenNumber" class="mt-3 font-bold font-[Roboto] text-[1.4rem]">109</h2>
                         <p
                             class="font-[Noto_Serif_Bengali] text-[0.8rem] text-[#5C5C5C] bg-[#F2F2F2] inline-block rounded-2xl px-4 py-1">
                             সহায়তা</p>
                         <!-- Button add  -->
                         <div class="flex justify-between mt-4">
-                            <!-- Left button  -->
+                            <!-- Copy button  -->
                             <button
                                 class="w-[48%] rounded-md border-1 solid border-[#D4D6D5] py-1 text-[0.7rem] text-[#5C5C5C] cursor-pointer hover:bg-slate-700  hover:text-white "
-                                type="button">
+                                type="button" onclick="increaseCopy(), womenCopy()">
                                 <i class="fa-regular fa-copy"></i>
                                 Copy</button>
-                            <!-- right button -->
+                            <!-- Call button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="women()"
-                                type="submit">
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                onclick="women()" type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -296,7 +298,7 @@
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">দুদক
                         </h2>
                         <p class="text-[0.8rem] text-[#5C5C5C]">Anti-Corruption</p>
-                        <h2 class="mt-3 font-bold font-[Roboto] text-[1.4rem]">106</h2>
+                        <h2 id="corruptionNumber" class="mt-3 font-bold font-[Roboto] text-[1.4rem]">106</h2>
                         <p
                             class="font-[Noto_Serif_Bengali] text-[0.8rem] text-[#5C5C5C] bg-[#F2F2F2] inline-block rounded-2xl px-4 py-1">
                             সরকারি</p>
@@ -305,13 +307,13 @@
                             <!-- Left button  -->
                             <button
                                 class="w-[48%] rounded-md border-1 solid border-[#D4D6D5] py-1 text-[0.7rem] text-[#5C5C5C] cursor-pointer hover:bg-slate-700  hover:text-white "
-                                type="button">
+                                type="button" onclick="increaseCopy(), corruptionCopy()">
                                 <i class="fa-regular fa-copy"></i>
                                 Copy</button>
                             <!-- right button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="corruption()"
-                                type="submit">
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                onclick="corruption()" type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -335,22 +337,22 @@
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">বিদ্যুৎ বিভ্রাট
                         </h2>
                         <p class="text-[0.8rem] text-[#5C5C5C]">Electricity Outage</p>
-                        <h2 class="mt-3 font-bold font-[Roboto] text-[1.4rem]">16216</h2>
+                        <h2 id="electricityNumber" class="mt-3 font-bold font-[Roboto] text-[1.4rem]">16216</h2>
                         <p
                             class="font-[Noto_Serif_Bengali] text-[0.8rem] text-[#5C5C5C] bg-[#F2F2F2] inline-block rounded-2xl px-4 py-1">
                             বিদ্যুৎ</p>
                         <!-- Button add  -->
                         <div class="flex justify-between mt-4">
-                            <!-- Left button  -->
+                            <!-- Copy button  -->
                             <button
                                 class="w-[48%] rounded-md border-1 solid border-[#D4D6D5] py-1 text-[0.7rem] text-[#5C5C5C] cursor-pointer hover:bg-slate-700  hover:text-white "
-                                type="button">
+                                type="button" onclick="increaseCopy(), electricityCopy()">
                                 <i class="fa-regular fa-copy"></i>
                                 Copy</button>
-                            <!-- right button -->
+                            <!-- Call button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="electricity()"
-                                type="submit">
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                onclick="electricity()" type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -374,22 +376,22 @@
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">ব্র্যাক
                         </h2>
                         <p class="text-[0.8rem] text-[#5C5C5C]">Brac</p>
-                        <h2 class="mt-3 font-bold font-[Roboto] text-[1.4rem]">16445</h2>
+                        <h2 id="bracNumber" class="mt-3 font-bold font-[Roboto] text-[1.4rem]">16445</h2>
                         <p
                             class="font-[Noto_Serif_Bengali] text-[0.8rem] text-[#5C5C5C] bg-[#F2F2F2] inline-block rounded-2xl px-4 py-1">
                             এনজিও</p>
                         <!-- Button add  -->
                         <div class="flex justify-between mt-4">
-                            <!-- Left button  -->
+                            <!-- Copy button  -->
                             <button
                                 class="w-[48%] rounded-md border-1 solid border-[#D4D6D5] py-1 text-[0.7rem] text-[#5C5C5C] cursor-pointer hover:bg-slate-700  hover:text-white "
-                                type="button">
+                                type="button" onclick="increaseCopy(), bracCopy()">
                                 <i class="fa-regular fa-copy"></i>
                                 Copy</button>
-                            <!-- right button -->
+                            <!-- Call button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="brac()"
-                                type="submit">
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                onclick="brac()" type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -413,22 +415,22 @@
                         <h2 class="font-[Noto_Serif_Bengali] mt-2 font-extrabold text-[1.2rem]">বাংলাদেশ রেলওয়ে
                         </h2>
                         <p class="text-[0.8rem] text-[#5C5C5C]">Bangladesh Railway</p>
-                        <h2 class="mt-3 font-bold font-[Roboto] text-[1.4rem]">163</h2>
+                        <h2 id="railwayNumber" class="mt-3 font-bold font-[Roboto] text-[1.4rem]">163</h2>
                         <p
                             class="font-[Noto_Serif_Bengali] text-[0.8rem] text-[#5C5C5C] bg-[#F2F2F2] inline-block rounded-2xl px-4 py-1">
                             পরিবহন</p>
                         <!-- Button add  -->
                         <div class="flex justify-between mt-4">
-                            <!-- Left button  -->
+                            <!-- Copy button  -->
                             <button
                                 class="w-[48%] rounded-md border-1 solid border-[#D4D6D5] py-1 text-[0.7rem] text-[#5C5C5C] cursor-pointer hover:bg-slate-700  hover:text-white "
-                                type="button">
+                                type="button" onclick="increaseCopy(), railwayCopy()">
                                 <i class="fa-regular fa-copy"></i>
                                 Copy</button>
-                            <!-- right button -->
+                            <!-- Call button -->
                             <button
-                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer" onclick="railway()"
-                                type="submit">
+                                class="w-[48%] rounded-md bg-[#00A63E] hover:bg-[#a9a9a9] py-1 text-[0.7rem] text-white cursor-pointer"
+                                onclick="railway()" type="submit">
                                 <i class="fa-solid fa-phone"></i>
                                 Call</button>
                         </div>
@@ -445,10 +447,8 @@
                         <p class="font-semibold text-[0.9rem]">Call History</p>
                     </div>
                     <!-- Clear -->
-                    <div
-                        class="flex bg-[#00A63E] hover:bg-[#a9a9a9] h-10 w-22 rounded-full items-center justify-center">
-                        <button class="text-[0.8rem] text-white font-medium cursor-pointer">Clear</button>
-                    </div>
+                    <button
+                        class="flex bg-[#00A63E] hover:bg-[#a9a9a9] h-10 w-22 rounded-full items-center justify-center cursor-pointer text-[0.8rem] text-white font-medium ">Clear</button>
                 </div>
 
                 <!-- Call no 1  -->
