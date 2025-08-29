@@ -106,16 +106,46 @@ for (const call of callBtn) {
             document.getElementById('coin-count')
                 .innerText = coinCount - 20;
 
+            // cartHading is add dynamic history-container 
+            const cartHading = call.parentNode.parentNode.children[1].innerText;
+        
             const serviceName = call.parentNode.parentNode.children[2].innerText;
             const serviceNumber = call.parentNode.parentNode.children[3].innerText;
 
             alert(`📞 Calling ${serviceName}  ${serviceNumber}...`)
+
+            // dynamic div add start
+            const date = new Date().toLocaleTimeString();
+            const newDiv = document.createElement('div');
+            const historyContainer = document.getElementById('history-container');
+
+            newDiv.innerHTML = `
+
+              
+              <div class="bg-gray-100 h-16 px-3.5 rounded-lg flex justify-between items-center text-[0.8rem] ">
+                     <div>
+                            <p class="leading-7.5 font-bold font-[Noto_Serif_Bengali]">${cartHading}</p>
+                            <p>${serviceNumber}</p>
+                     </div>
+                     <h1>${date}</h1>
+                     
+              </div> `
+
+            historyContainer.append(newDiv);
+            // dynamic div add end
+
+
+
+
+
 
         } else {
             alert("⚠️ You don't have enough coins! At least 20 coins are needed. Refresh to add coins...")
         }
     })
 }
+
+/* <div class="cart-div flex justify-between items-center bg-gray-100 p-2 rounded-lg mt-5"></div>  */
 
 // // Just 1 item ok
 //  let coin = 100;
