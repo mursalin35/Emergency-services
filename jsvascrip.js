@@ -1,4 +1,5 @@
 // Heart counter 
+
 let heartCount = 0;
 function increaseHeart() {
     heartCount++;
@@ -9,11 +10,13 @@ function increaseHeart() {
 
 
 // copy counter 
+
 let copyCount = 0;
 function increaseCopy() {
     copyCount++;
     document.getElementById('copyCounter').innerText = copyCount;
 }
+
 
 
 
@@ -94,7 +97,10 @@ function railwayCopy() {
 
 
 
+
+
 //  Event listener call btn 
+
 const callBtn = document.getElementsByClassName('call-btn');
 for (const call of callBtn) {
     call.addEventListener('click', function () {
@@ -108,7 +114,7 @@ for (const call of callBtn) {
 
             // cartHading is add dynamic history-container 
             const cartHading = call.parentNode.parentNode.children[1].innerText;
-        
+
             const serviceName = call.parentNode.parentNode.children[2].innerText;
             const serviceNumber = call.parentNode.parentNode.children[3].innerText;
 
@@ -121,21 +127,17 @@ for (const call of callBtn) {
 
             newDiv.innerHTML = `
 
-              
-              <div class="bg-gray-100 h-16 px-3.5 rounded-lg flex justify-between items-center text-[0.8rem] ">
+            <div class="bg-gray-100 h-16 px-3.5 rounded-lg flex justify-between items-center text-[0.8rem] ">
                      <div>
                             <p class="leading-7.5 font-bold font-[Noto_Serif_Bengali]">${cartHading}</p>
                             <p>${serviceNumber}</p>
                      </div>
                      <h1>${date}</h1>
-                     
+
               </div> `
 
             historyContainer.append(newDiv);
             // dynamic div add end
-
-
-
 
 
 
@@ -144,6 +146,31 @@ for (const call of callBtn) {
         }
     })
 }
+
+
+
+
+// clear history section 
+
+const clearBtn = document.getElementById('clear-history-btn');
+clearBtn.addEventListener('click', function () {
+
+    const domElement = document.getElementById('history-container')
+        .innerHTML = '';
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* <div class="cart-div flex justify-between items-center bg-gray-100 p-2 rounded-lg mt-5"></div>  */
 
