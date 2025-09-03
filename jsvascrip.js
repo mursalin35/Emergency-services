@@ -34,8 +34,6 @@ for (const copy of copyBtn) {
 
 
 
-
-
 //  Event listener call btn 
 
 const callBtn = document.getElementsByClassName('call-btn');
@@ -57,8 +55,19 @@ for (const call of callBtn) {
 
             alert(`📞 Calling ${serviceName}  ${serviceNumber}...`)
 
+
             // dynamic div add start
-            const date = new Date().toLocaleTimeString();
+
+            // local time zoon
+            const time = new Date().toLocaleTimeString('en-US', {
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true,
+
+            }
+            );
+
             const newDiv = document.createElement('div');
             const historyContainer = document.getElementById('history-container');
 
@@ -69,7 +78,7 @@ for (const call of callBtn) {
                             <p class="leading-7.5 font-bold font-[Noto_Serif_Bengali]">${cartHading}</p>
                             <p>${serviceNumber}</p>
                      </div>
-                     <h1>${date}</h1>
+                     <h1>${time}</h1>
 
               </div> `
 
